@@ -1,0 +1,7 @@
+Configure miss: main in -lieee
+Configure miss: if 64bit support is requested
+Configure miss: if 64bit Sparc VIS support is requested
+Configure miss: build with symbols
+Configure miss: tm_tzadj in struct tm
+Configure miss: union wait
+Configure miss: main in -ldnet_stub
