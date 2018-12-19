@@ -4,9 +4,9 @@
 #
 Name     : tclx
 Version  : 1
-Release  : 1
-URL      : https://downloads.sourceforge.net/project/tclx/TclX/8.4.1/tclx8.4.1.tar.bz2
-Source0  : https://downloads.sourceforge.net/project/tclx/TclX/8.4.1/tclx8.4.1.tar.bz2
+Release  : 2
+URL      : https://sourceforge.net/projects/tclx/files/TclX/8.4.1/tclx8.4.1.tar.bz2
+Source0  : https://sourceforge.net/projects/tclx/files/TclX/8.4.1/tclx8.4.1.tar.bz2
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : TCL
@@ -73,12 +73,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1543224030
+export SOURCE_DATE_EPOCH=1545260489
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1543224030
+export SOURCE_DATE_EPOCH=1545260489
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/tclx
 cp license.terms %{buildroot}/usr/share/package-licenses/tclx/license.terms
