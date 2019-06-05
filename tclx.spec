@@ -4,7 +4,7 @@
 #
 Name     : tclx
 Version  : 1
-Release  : 2
+Release  : 3
 URL      : https://sourceforge.net/projects/tclx/files/TclX/8.4.1/tclx8.4.1.tar.bz2
 Source0  : https://sourceforge.net/projects/tclx/files/TclX/8.4.1/tclx8.4.1.tar.bz2
 Summary  : No detailed summary available
