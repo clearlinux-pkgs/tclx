@@ -4,7 +4,7 @@
 #
 Name     : tclx
 Version  : 1
-Release  : 3
+Release  : 4
 URL      : https://sourceforge.net/projects/tclx/files/TclX/8.4.1/tclx8.4.1.tar.bz2
 Source0  : https://sourceforge.net/projects/tclx/files/TclX/8.4.1/tclx8.4.1.tar.bz2
 Summary  : No detailed summary available
@@ -15,6 +15,7 @@ Requires: tclx-license = %{version}-%{release}
 Requires: tclx-man = %{version}-%{release}
 BuildRequires : tcl
 BuildRequires : tcl-dev
+BuildRequires : tcl-staticdev
 BuildRequires : tk
 BuildRequires : tk-dev
 
@@ -35,6 +36,7 @@ Summary: dev components for the tclx package.
 Group: Development
 Requires: tclx-lib = %{version}-%{release}
 Provides: tclx-devel = %{version}-%{release}
+Requires: tclx = %{version}-%{release}
 
 %description dev
 dev components for the tclx package.
@@ -72,13 +74,21 @@ man components for the tclx package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1545260489
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562974291
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1545260489
+export SOURCE_DATE_EPOCH=1562974291
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/tclx
 cp license.terms %{buildroot}/usr/share/package-licenses/tclx/license.terms

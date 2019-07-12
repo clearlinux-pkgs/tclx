@@ -2,5 +2,6 @@
 # picked up automatically. One name per line, no whitespace.
 tcl
 tcl-dev
+tcl-staticdev
 tk
 tk-dev
